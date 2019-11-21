@@ -1,0 +1,13 @@
+id,prod_name,amount,price,cost,rate
+1,Pay-As-You-Park,99,269,3,0.09
+2,Travel Trailer,31,410,7,0.01
+3,Apartment & Condo,66,82,46,0.92
+4,Universal Life,58,801,11,0.35
+5,Term Life,64,126,29,0.73
+6,Disability Insurance,6,635,4,0.66
+7,Pet Insurance,68,507,2,0.76
+8,Mobile Home,52,425,12,0.38
+9,Recreational Vehicles ,85,486,7,0.07
+10,Long Term Care,26,652,21,0.53
+11,Motorcycle,56,719,10,0.44
+12,Whole Life,32,397,49,0.5
