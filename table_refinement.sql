@@ -83,11 +83,7 @@ CREATE TABLE admin (
   PRIMARY KEY (admin_id)
   );
 
-CREATE TABLE prodKind (
-  prodkind_id int(5) NOT NULL,
-  prodkind varchar(20) DEFAULT NULL,
-  PRIMARY KEY (prodkind_id)
-);
+
 
 -- ----------------------------
 -- Table structure for Products
@@ -98,10 +94,8 @@ CREATE TABLE products (
   amount varchar(20) DEFAULT NULL,
   price int(10) DEFAULT NULL,
   cost int(10) DEFAULT NULL,
-  prodkind_id int(5) DEFAULT NULL,
   rate double(4,3) DEFAULT NULL,
-  PRIMARY KEY (prod_id),
-  foreign key (prodkind_id) references prodKind(prodkind_id)
+  PRIMARY KEY (prod_id)
 );
 
 
