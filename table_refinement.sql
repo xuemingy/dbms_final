@@ -158,7 +158,6 @@ CREATE TABLE store (
 
 CREATE TABLE transaction (
   order_id int(10) NOT NULL,
-  sid int(5) NOT NULL,
   trans_date date NOT NULL,
   total_price int(10) DEFAULT NULL,
   sid int(5) NOT NULL,
