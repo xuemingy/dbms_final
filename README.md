@@ -11,3 +11,6 @@ sign in: done
 sign up: yxm
 cart: 宋驰
 admin : 田硕
+
+
+http://localhost:8888/finalproj/register.php
