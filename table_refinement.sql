@@ -20,26 +20,7 @@ CREATE TABLE custKind (
   PRIMARY KEY (custkind_id)
 );
 
-CREATE TABLE business (
-  business_id int(5) NOT NULL AUTO_INCREMENT,
-  customer_id int(5) NOT NULL,
-  category varchar(20) DEFAULT NULL,
-  grs_an_incm int(20) DEFAULT NULL,
-  PRIMARY KEY (business_id),
-  foreign key (customer_id) references customers(customer_id)
-);
 
-CREATE TABLE home (
-  home_id int(5) NOT NULL AUTO_INCREMENT,
-  customer_id int(5) NOT NULL,
-  mrg_state varchar(10) DEFAULT NULL,
-  gender varchar(10) DEFAULT NULL,
-  age int(3) DEFAULT NULL,
-  income int(10) DEFAULT NULL,
-  PRIMARY KEY (home_id),
-  foreign key (customer_id) references customers(customer_id)
-
-);
 
 CREATE TABLE state (
   state_id int(5) NOT NULL AUTO_INCREMENT,
@@ -69,6 +50,27 @@ CREATE TABLE customers (
   PRIMARY KEY (customer_id),
   foreign key (custkind_id) references custKind(custkind_id),
   foreign key (city_id) references city(city_id)
+);
+
+CREATE TABLE business (
+  business_id int(5) NOT NULL AUTO_INCREMENT,
+  customer_id int(5) NOT NULL,
+  category varchar(20) DEFAULT NULL,
+  grs_an_incm int(20) DEFAULT NULL,
+  PRIMARY KEY (business_id),
+  foreign key (customer_id) references customers(customer_id)
+);
+
+CREATE TABLE home (
+  home_id int(5) NOT NULL AUTO_INCREMENT,
+  customer_id int(5) NOT NULL,
+  mrg_state varchar(10) DEFAULT NULL,
+  gender varchar(10) DEFAULT NULL,
+  age int(3) DEFAULT NULL,
+  income int(10) DEFAULT NULL,
+  PRIMARY KEY (home_id),
+  foreign key (customer_id) references customers(customer_id)
+
 );
 
 
