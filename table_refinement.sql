@@ -15,35 +15,40 @@
 */
 
 CREATE TABLE custKind (
-  custkind_id int(5) NOT NULL,
+  custkind_id int(5) NOT NULL AUTO_INCREMENT,
   kind varchar(20) DEFAULT NULL,
   PRIMARY KEY (custkind_id)
 );
 
 CREATE TABLE business (
+  business_id int(5) NOT NULL AUTO_INCREMENT,
   customer_id int(5) NOT NULL,
   category varchar(20) DEFAULT NULL,
   grs_an_incm int(20) DEFAULT NULL,
-  PRIMARY KEY (customer_id)
+  PRIMARY KEY (business_id),
+  foreign key (customer_id) references customers(customer_id)
 );
 
 CREATE TABLE home (
+  home_id int(5) NOT NULL AUTO_INCREMENT,
   customer_id int(5) NOT NULL,
-  mrg_state varchar(2) DEFAULT NULL,
-  gender varchar(1) DEFAULT NULL,
+  mrg_state varchar(10) DEFAULT NULL,
+  gender varchar(10) DEFAULT NULL,
   age int(3) DEFAULT NULL,
   income int(10) DEFAULT NULL,
-  PRIMARY KEY (customer_id)
+  PRIMARY KEY (home_id),
+  foreign key (customer_id) references customers(customer_id)
+
 );
 
 CREATE TABLE state (
-  state_id int(5) NOT NULL,
+  state_id int(5) NOT NULL AUTO_INCREMENT,
   statename varchar(20) DEFAULT NULL,
   PRIMARY KEY (state_id)
 );
 
 CREATE TABLE city (
-  city_id int(5) NOT NULL,
+  city_id int(5) NOT NULL AUTO_INCREMENT,
   cityname varchar(20) DEFAULT NULL,
   state_id int(5) NOT NULL,
   PRIMARY KEY (city_id),
@@ -54,7 +59,7 @@ CREATE TABLE city (
 -- Table structure for Customers
 -- ----------------------------
 CREATE TABLE customers (
-  customer_id int(5) NOT NULL,
+  customer_id int(5) NOT NULL AUTO_INCREMENT,
   first_name varchar(20) DEFAULT NULL,
   last_name varchar(20) DEFAULT NULL,
   street varchar(50) DEFAULT NULL,
@@ -68,8 +73,8 @@ CREATE TABLE customers (
 
 
 CREATE TABLE user (
-  user_id int(5) NOT NULL,
-  username varchar(20) DEFAULT NULL,
+  user_id int(5) NOT NULL AUTO_INCREMENT,
+  email varchar(20) DEFAULT NULL,
   password varchar(20) DEFAULT NULL,
   customer_id int(5) DEFAULT NULL,
   PRIMARY KEY (user_id),
@@ -77,7 +82,7 @@ CREATE TABLE user (
 );
 
 CREATE TABLE admin (
-  admin_id int(5) NOT NULL,
+  admin_id int(5) NOT NULL AUTO_INCREMENT,
   username varchar(20) DEFAULT NULL,
   password varchar(20) DEFAULT NULL,
   PRIMARY KEY (admin_id)
@@ -89,7 +94,7 @@ CREATE TABLE admin (
 -- Table structure for Products
 -- ----------------------------
 CREATE TABLE products (
-  prod_id int(5) NOT NULL,
+  prod_id int(5) NOT NULL AUTO_INCREMENT,
   prod_name varchar(20) DEFAULT NULL,
   amount varchar(20) DEFAULT NULL,
   price int(10) DEFAULT NULL,
@@ -102,7 +107,7 @@ CREATE TABLE products (
 
 
 CREATE TABLE region (
-  region_id int(5) NOT NULL,
+  region_id int(5) NOT NULL AUTO_INCREMENT,
   region_name varchar(20) NOT NULL,
   region_manager_id int(5) NOT NULL,
   PRIMARY KEY (region_id)
@@ -115,7 +120,7 @@ CREATE TABLE region (
 --
 
 CREATE TABLE salesperson (
-  sid int(5) NOT NULL,
+  sid int(5) NOT NULL AUTO_INCREMENT,
   first_name varchar(10) NOT NULL,
   last_name varchar(10) NOT NULL,
   street varchar(10) NOT NULL,
@@ -135,7 +140,7 @@ CREATE TABLE salesperson (
 --
 
 CREATE TABLE store (
-  store_id int(5) NOT NULL,
+  store_id int(5) NOT NULL AUTO_INCREMENT,
   street varchar(20) NOT NULL,
   city_id int(5) NOT NULL,
   manager_id int(5) NOT NULL,
@@ -151,7 +156,7 @@ CREATE TABLE store (
 --
 
 CREATE TABLE transaction (
-  order_id int(10) NOT NULL,
+  order_id int(10) NOT NULL AUTO_INCREMENT,
   trans_date date NOT NULL,
   total_price int(10) DEFAULT NULL,
   sid int(5) NOT NULL,
@@ -162,7 +167,7 @@ CREATE TABLE transaction (
 
 
 CREATE TABLE trans_prod (
-  order_id int(10) NOT NULL,
+  order_id int(10) NOT NULL AUTO_INCREMENT,
   prod_id int(5) NOT NULL,
   price int(10) DEFAULT NULL,
   amount int(5) NOT NULL,
