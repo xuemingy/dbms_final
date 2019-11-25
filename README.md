@@ -13,4 +13,14 @@ cart: 宋驰
 admin : 田硕
 
 
+| functions     | owner         | progress  |
+| ------------- |:-------------:| -----:|
+| 主页         | 宋驰 | $1600 |
+| 产品查询及显示         | 杨雪铭 | doing |
+| 数据整合及可视    | centered      |   |
+| sign in | null      |    |
+| sign up | 杨雪铭      |    done |
+| shopping cart | 宋驰      |     |
+| admin | 田硕      |     |
+
 http://localhost:8888/finalproj/register.php
