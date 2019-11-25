@@ -77,11 +77,12 @@ CREATE TABLE home (
 CREATE TABLE user (
   user_id int(5) NOT NULL AUTO_INCREMENT,
   email varchar(20) DEFAULT NULL,
-  password varchar(20) DEFAULT NULL,
+  password varchar(200) DEFAULT NULL,
   customer_id int(5) DEFAULT NULL,
   PRIMARY KEY (user_id),
   foreign key (customer_id) references customers(customer_id)
 );
+
 
 CREATE TABLE admin (
   admin_id int(5) NOT NULL AUTO_INCREMENT,
