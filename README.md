@@ -18,6 +18,10 @@
 | admin | 田硕      |     |
 
 
+# 11/26 notes #
+由主页直接进入商品界面，跳过region.php和hotel.php
+在购物篮添加store_ID, Salesperson, quantity三类
+
 
 http://localhost:8888/finalproj/register.php
 
