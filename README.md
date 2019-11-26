@@ -1,8 +1,9 @@
 # dbms_final
 # Questions
 1. 数据导入 （外建数据怎么导入）
+2. 产品需不需要根据region划分及展示？
 
-2. 分工
+#分工
 
 
 
@@ -19,3 +20,4 @@
 
 
 http://localhost:8888/finalproj/register.php
+
