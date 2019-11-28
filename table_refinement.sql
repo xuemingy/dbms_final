@@ -126,11 +126,11 @@ CREATE TABLE salesperson (
   sid int(5) NOT NULL AUTO_INCREMENT,
   first_name varchar(10) NOT NULL,
   last_name varchar(10) NOT NULL,
-  street varchar(10) NOT NULL,
+  street varchar(50) NOT NULL,
   city_id int(5) NOT NULL,
   zipcode int(5) NOT NULL,
   email varchar(15) NOT NULL,
-  title int(2) NOT NULL,
+  title varchar(20) NOT NULL,
   store_id int(5) NOT NULL,
   salary int(5) NOT NULL,
   PRIMARY KEY (sid)
@@ -144,6 +144,7 @@ CREATE TABLE salesperson (
 
 CREATE TABLE store (
   store_id int(5) NOT NULL AUTO_INCREMENT,
+  store_name varchar(50) NOT NULL,
   street varchar(20) NOT NULL,
   city_id int(5) NOT NULL,
   manager_id int(5) NOT NULL,
