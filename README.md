@@ -10,8 +10,8 @@
 | functions     | owner         | progress  |
 | ------------- |:-------------:| -----:|
 | 主页         | 宋驰 |  |
-| 产品查询及显示         | 杨雪铭 | doing |
-| 数据整合及可视    | 田硕      |   |
+| 产品查询及显示         | 杨雪铭 | store和SALESPERSON二级联动有问题，其他done |
+| 数据整合及可视    | 田硕      |   | 
 | sign in | 杨雪铭      |    done|
 | sign up | 杨雪铭      |    done |
 | shopping cart | 宋驰      |     |
