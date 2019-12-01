@@ -5,7 +5,9 @@
 
 # 12/1 notes 
 report 里1 2 5 6 7 8 的内容基本写完了， 第二点E-R图我没画， 每个表的description我写了。
+
 第四点relational schema我没想好怎么写
+
 第九点我睡醒了写
 
 # 分工
